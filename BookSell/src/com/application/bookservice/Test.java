@@ -12,6 +12,8 @@ public class Test {
 		
 		BookController bookController = new BookController();
 		bookController.read();
+		System.out.println("                 ");
+		System.out.println("All the setup is done.");
 	}
 
 }
