@@ -1,2 +1,2 @@
 # Book
-This is a simple java servise.
+This is a simple java service.
