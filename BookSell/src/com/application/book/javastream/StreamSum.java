@@ -44,5 +44,24 @@ public class StreamSum {
 		Integer min = list.stream().min(Comparator.comparing(Integer::valueOf)).get();
 		System.out.println("Min: " + min);
 		
+		List<Integer> asc = list.stream().sorted().collect(Collectors.toList());
+		System.out.println("sorted in asc order: " + asc);
+		
+		List<Integer> desc = list.stream().sorted(Collections.reverseOrder()).collect(Collectors.toList());
+		
+		System.out.println("Desc order: " + desc);
+		
+		//return sum of first five num
+		Integer firstFiveSum = list.stream().limit(5).reduce((a,b) -> a +b).get();
+		System.out.println("First five sum:" + firstFiveSum);
+		
+		//return sum of skipping first five
+		Integer skip5 = list.stream().skip(5).reduce((a,b) -> a+b).get();
+		System.out.println("skip first five: " + skip5);
+		
+		
+		
+		
+		
 	}
 }
