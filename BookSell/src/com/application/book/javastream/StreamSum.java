@@ -59,7 +59,7 @@ public class StreamSum {
 		Integer skip5 = list.stream().skip(5).reduce((a,b) -> a+b).get();
 		System.out.println("skip first five: " + skip5);
 		
-		
+		list.stream().sorted(Comparator.reverseOrder()).skip(2).limit(1).forEach(System.out::println);
 		
 		
 		
